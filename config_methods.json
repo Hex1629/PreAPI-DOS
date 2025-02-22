@@ -1,0 +1,26 @@
+{
+    "Layer7": {
+        "HTTP-19":{
+            "path":"cd /meth/L7/HTTP",
+            "command":"python HTTP_19.py ::Ip:: ::Thread:: ::Time:: ::Method_HTTP::",
+            "parameters":"Ip,Time,Thread,Method_HTTP"
+        },
+        "RAPID-FAST":{
+            "path":"cd /meth/L7/HTTPS",
+            "command":"python RAPID_FAST.py ::Url:: ::Thread:: ::Method_HTTP::",
+            "parameters":"Url,Thread,Method_HTTP"
+        }
+    },
+    "Layer4":{
+        "TCP-RST":{
+            "path":"cd /meth/L4/TCP",
+            "command":"python TCP_RST.py ::Ip:: ::Port:: ::Thread:: ::Size::",
+            "parameters":"Ip,Port,Thread,Size"
+        },
+        "UDP-STORM":{
+            "path":"cd /meth/L4/UDP_STORM",
+            "command":"python UDP_STORM.py ::Ip:: ::Port:: ::Thread:: ::Size::",
+            "parameters":"Ip,Port,Thread,Size"
+        }
+    }
+}
